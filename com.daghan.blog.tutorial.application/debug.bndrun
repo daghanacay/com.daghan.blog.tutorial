@@ -1,0 +1,12 @@
+#
+# TUTORIAL APPLICATION DEBUG RUN SPECIFICATION
+#
+
+-include: ~com.daghan.blog.tutorial.bndrun
+
+-runrequires.debug:  ${debug-bundles}
+
+-runtrace: true
+
+-runbundles: \
+	${error;Resolve first}
