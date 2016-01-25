@@ -1,5 +1,8 @@
 package com.daghan.blog.tutorial.application;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.osgi.service.component.annotations.Component;
 
 import osgi.enroute.configurer.api.RequireConfigurerExtender;
@@ -14,13 +17,16 @@ import osgi.enroute.webserver.capabilities.RequireWebServerExtender;
 @RequireConfigurerExtender
 @Component(name = "com.daghan.blog.tutorial")
 public class TutorialApplication implements REST {
-	// Step 1 List of blogs we need 
-	private List<Blog> blogs;
-	
-	
+	// Step 1 List of blogs we need
+	private List<String> blogs;
 
-	public String getBlogs() {
-		return string.toUpperCase();
+	public List<String> getBlogs() {
+		//Initiate blog everytime
+		blogs = new ArrayList<>();
+		for (int i = 0; i < 10; i++) {
+			blogs.add("BLog Number" + 1);
+		}
+		return blogs;
 	}
 
 }
