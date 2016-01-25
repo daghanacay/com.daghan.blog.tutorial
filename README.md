@@ -1,8 +1,21 @@
-<h1><img src="http://enroute.osgi.org/img/enroute-logo-64.png" witdh=40px style="float:left;margin: 0 1em 1em 0;width:40px">
-OSGi enRoute Archetype</h1>
+This is a repository for OSGi-Angular blog page tutorial. Please check out the corresponding branch to follow the tutorial at your own pace
 
-This repository represents a template workspace for bndtools, it is the easiest way to get started with OSGi enRoute. The workspace is useful in an IDE (bndtools or Intellij) and has support for [continuous integration][2] with [gradle][3]. If you want to get started with enRoute, then follow the steps in the [quick-start guide][1].
+Lesson 1 Create a blog page with OSGi
 
-[1]: http://enroute.osgi.org/quick-start.html
-[2]: http://enroute.osgi.org/tutorial_base/800-ci.html
-[3]: https://www.gradle.org/
+We will learn 
+- how to set up the Enroute workspace
+- How to create the first application bundle
+- How to create the Angular front end
+- How to do a search powered by Angular
+
+Lesson 2
+
+We will learn 
+- Extending the blog page with comments
+- Extending Search with back end engine
+
+Lesson 3
+
+We will learn 
+- Adding Adds
+- Extending adds for multiple providers
