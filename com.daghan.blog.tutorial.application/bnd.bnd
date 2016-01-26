@@ -8,8 +8,9 @@ Bundle-Description: \
 	Bundle for Blog application\
 	
 
-Private-Package:  \
-	com.daghan.blog.tutorial.application
+Private-Package: \
+	com.daghan.blog.tutorial.application,\
+	com.daghan.blog.dto
 
 EnRoute-Application: 	com.daghan.blog.tutorial
 JPM-Command:			tutoril
@@ -21,8 +22,11 @@ JPM-Command:			tutoril
 	web=web
 
 -buildpath: \
-	osgi.enroute.base.api
+	osgi.enroute.base.api,\
+	com.daghan.blog.api;version=latest
 	
 -testpath: \
 	osgi.enroute.junit.wrapper;version=4.12
 -runbundles: org.apache.felix.log;version='[1.0.1,1.0.2)'
+-runee: JavaSE-1.8
+-runfw: org.eclipse.osgi

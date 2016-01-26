@@ -1,9 +1,20 @@
 'use strict';
 
 // Blog Module
-var blogModule = angular.module('blogModule',[]);
+var blogModule = angular.module('blogModule', []);
 
-blogModule.controller('BlogController', function() {
+blogModule.controller('BlogController', [ '$http', function($http) {
     var vm = this;
-    this.blogs = ["BLogFrontEnd1","BLogFrontEnd2"];
-});
+    this.selectedBlog = null;
+    this.blogs = [];
+    
+    $http({
+	method : 'GET',
+	url : '/rest/blogs'
+    }).then(function successCallback(response) {
+	vm.blogs = response.data;
+    }, function errorCallback(response) {
+	vm.errorMsg = response;
+    });
+
+} ]);
