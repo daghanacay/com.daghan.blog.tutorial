@@ -9,6 +9,7 @@
 -runtrace: true
 
 -runbundles: \
+	com.body.search.provider;version=snapshot,\
 	com.daghan.blog.api;version=snapshot,\
 	com.daghan.blog.tutorial.application;version=snapshot,\
 	com.inmemory.blog.provider;version=snapshot,\

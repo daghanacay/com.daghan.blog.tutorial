@@ -15,14 +15,16 @@ import com.daghan.blog.api.domain.Blog;
  */
 @Component(name = "com.inmemory.blog")
 public class BlogSourceImpl implements BlogSource {
-	private final List<Blog> storedBlogs = new ArrayList<>();;
+	private final List<Blog> storedBlogs = new ArrayList<>();
+	private final String[] bodyArray = { "body of the first blog", "body of the second blog",
+			"body of the third blog" };
 
 	@Activate
 	private void initSource() {
 		String title, body;
-		for (int i = 0; i < 15; i++) {
+		for (int i = 0; i < bodyArray.length; i++) {
 			title = "Title-" + (i + 1);
-			body = "Body from the BlogSourceImpl: " + (i + 1);
+			body = bodyArray[i];
 			storedBlogs.add(new BlogImpl(title, body));
 		}
 	}

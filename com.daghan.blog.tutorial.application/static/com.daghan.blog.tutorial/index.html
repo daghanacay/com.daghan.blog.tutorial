@@ -25,12 +25,17 @@
 
 	<div class="container" ng-controller="BlogController as blogCtr">
 
+		<form novalidate class="simple-form">
+			<input type="text" ng-model="blogCtr.searchStr" /> <input
+				type="button" ng-click="blogCtr.search()" value="Search" />
+		</form>
 		<div class="header">Blogs</div>
 		<div>
 			<div class="row">
 				<div class="col-sm-5">
-					<ul class="nav nav-pills nav-justified" ng-repeat="blog in blogCtr.blogs">
-						<li ng-class="{active: blogCtr.selectedBlog==blog}" ><a
+					<ul class="nav nav-pills nav-justified"
+						ng-repeat="blog in blogCtr.blogs">
+						<li ng-class="{active: blogCtr.selectedBlog==blog}"><a
 							ng-click="blogCtr.selectedBlog = blog">{{blog.title}}</a></li>
 					</ul>
 				</div>

@@ -12,6 +12,7 @@ JPM-Command:					tutoril
 
 
 -runbundles: \
+	com.body.search.provider;version=snapshot,\
 	com.daghan.blog.api;version=snapshot,\
 	com.daghan.blog.tutorial.application;version=snapshot,\
 	com.inmemory.blog.provider;version=snapshot,\
@@ -38,4 +39,5 @@ JPM-Command:					tutoril
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=com.daghan.blog.api)',\
 	osgi.identity;filter:='(osgi.identity=com.daghan.blog.tutorial.application)',\
-	osgi.identity;filter:='(osgi.identity=com.inmemory.blog.provider)'
+	osgi.identity;filter:='(osgi.identity=com.inmemory.blog.provider)',\
+	osgi.identity;filter:='(osgi.identity=com.body.search.provider)'
