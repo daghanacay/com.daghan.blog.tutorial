@@ -38,6 +38,4 @@ JPM-Command:					tutoril
 -runee: JavaSE-1.8
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=com.daghan.blog.api)',\
-	osgi.identity;filter:='(osgi.identity=com.daghan.blog.tutorial.application)',\
-	osgi.identity;filter:='(osgi.identity=com.inmemory.blog.provider)',\
-	osgi.identity;filter:='(osgi.identity=com.body.search.provider)'
+	osgi.identity;filter:='(osgi.identity=com.daghan.blog.tutorial.application)'
